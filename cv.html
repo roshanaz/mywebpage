@@ -5,64 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Roshanak Zakizadeh</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <h2>Roshanak Zakizadeh</h2>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="cv.html" class="nav-link active">CV</a></li>
-                <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-            </ul>
+    <!-- Simple top bar -->
+    <div class="top-bar"></div>
+    
+    <!-- Minimal tabs -->
+    <nav class="minimal-nav">
+        <div class="nav-tabs">
+            <a href="index.html" class="tab-link">about</a>
+            <a href="https://medium.com/@rzakizadeh" class="tab-link" target="_blank">writings</a>
         </div>
     </nav>
-
-    <main class="cv-main">
-        <section class="cv-section">
-            <div class="container">
-                <div class="cv-header">
-                    <h1>My Curriculum Vitae</h1>
-                    <p>Download or view my resume below</p>
-                    <div class="cv-actions">
-                        <a href="assets/cv.pdf" download="RoshanakZakizadeh_CV.pdf" class="btn btn-primary">Download PDF</a>
-                        <a href="assets/cv.pdf" target="_blank" class="btn btn-secondary">Open in New Tab</a>
-                    </div>
-                </div>
-                
-                <div class="pdf-container">
-                    <iframe 
-                        src="assets/cv.pdf" 
-                        type="application/pdf" 
-                        width="100%" 
-                        height="800px"
-                        title="CV PDF Viewer">
-                        <p>Your browser does not support PDFs. 
-                           <a href="assets/cv.pdf">Download the PDF</a> instead.
-                        </p>
-                    </iframe>
-                </div>
-                
-                <!-- Fallback content for better accessibility -->
-                <div class="cv-fallback">
-                    <h2>Can't view the PDF?</h2>
-                    <p>If you're having trouble viewing the PDF above, you can:</p>
-                    <ul>
-                        <li><a href="assets/cv.pdf" download="RoshanakZakizadeh_CV.pdf">Download the CV as PDF</a></li>
-                        <li><a href="assets/cv.pdf" target="_blank">Open in a new tab</a></li>
-                        <li>Contact me directly for an alternative format</li>
-                    </ul>
+    
+    <main class="simple-main">
+        <div class="profile-container">
+            <div class="cv-header">
+                <h1>Roshanak Zakizadeh</h1>
+                <p>Curriculum Vitae</p>
+                <div class="cv-actions">
+                    <a href="assets/cv.pdf" download="RoshanakZakizadeh_CV.pdf" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
                 </div>
             </div>
-        </section>
+            
+            <div class="pdf-container">
+                <iframe 
+                    src="assets/cv.pdf" 
+                    type="application/pdf" 
+                    width="100%" 
+                    height="800px"
+                    title="CV PDF Viewer">
+                    <p>Your browser does not support PDFs. 
+                       <a href="assets/cv.pdf">Download the PDF</a> instead.
+                    </p>
+                </iframe>
+            </div>
+            
+            <!-- Fallback content for better accessibility -->
+            <div class="cv-fallback">
+                <h2>Can't view the PDF?</h2>
+                <p>If you're having trouble viewing the PDF above, you can:</p>
+                <ul>
+                    <li><a href="assets/cv.pdf" download="RoshanakZakizadeh_CV.pdf">Download the CV as PDF</a></li>
+                    <li>Contact me directly for an alternative format</li>
+                </ul>
+            </div>
+        </div>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Roshanak Zakizadeh. All rights reserved.</p>
+    
+    <!-- Bottom icons -->
+    <footer class="simple-footer">
+        <div class="footer-icons">
+            <a href="index.html" class="footer-icon" title="Home">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="mailto:rzakizadeh@gmail.com" class="footer-icon" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/roshanak-zakizadeh/" class="footer-icon" title="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/roshanaz" class="footer-icon" title="GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=y65sgjgAAAAJ&hl=en" class="footer-icon" title="Google Scholar" target="_blank">
+                <i class="fas fa-graduation-cap"></i>
+            </a>
+        </div>
+        <div class="footer-text">
+            <p>© 2024 by Roshanak Zakizadeh. All Rights Reserved.</p>
         </div>
     </footer>
 </body>

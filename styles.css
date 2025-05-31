@@ -18,6 +18,130 @@ body {
     padding: 0 20px;
 }
 
+/* Simple Layout Styles */
+.top-bar {
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 100%;
+}
+
+/* Minimal Navigation Tabs */
+.minimal-nav {
+    padding: 20px 0 0 30px;
+    background-color: #fff;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 25px;
+}
+
+.tab-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-link:hover {
+    color: #667eea;
+}
+
+.tab-link.active {
+    color: #667eea;
+    border-bottom: 2px solid #667eea;
+}
+
+.simple-main {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.profile-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+.profile-picture {
+    margin-bottom: 30px;
+}
+
+.profile-picture i {
+    font-size: 120px;
+    color: #667eea;
+    opacity: 0.8;
+}
+
+.profile-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.description {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.description a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.description a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.simple-footer {
+    background-color: #f8f9fa;
+    padding: 40px 20px 20px;
+    text-align: center;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-icon {
+    color: #666;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.footer-icon:hover {
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+.footer-text p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 /* Navigation */
 nav {
     background: #fff;
@@ -198,7 +322,7 @@ section {
 
 .contact-links {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -219,11 +343,10 @@ section {
     transform: translateY(-2px);
 }
 
-/* CV Page Styles */
+/* CV Styles */
 .cv-main {
     padding-top: 70px;
     min-height: 100vh;
-    background: #f8f9fa;
 }
 
 .cv-section {
@@ -238,52 +361,53 @@ section {
 .cv-header h1 {
     font-size: 2.5rem;
     color: #2c3e50;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 
 .cv-header p {
     font-size: 1.1rem;
     color: #666;
-    margin-bottom: 2rem;
+    margin-bottom: 30px;
 }
 
 .cv-actions {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
 .pdf-container {
+    max-width: 1000px;
+    margin: 0 auto;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    overflow: hidden;
-    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .pdf-container iframe {
+    width: 100%;
     border: none;
-    display: block;
+    border-radius: 10px;
 }
 
 .cv-fallback {
-    background: white;
+    max-width: 600px;
+    margin: 40px auto 0;
     padding: 30px;
+    background: #f8f9fa;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     text-align: center;
 }
 
 .cv-fallback h2 {
     color: #2c3e50;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
 }
 
 .cv-fallback ul {
     list-style: none;
-    padding: 0;
+    margin-top: 20px;
 }
 
 .cv-fallback li {
@@ -311,65 +435,100 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
-        gap: 15px;
+        display: none;
     }
-    
+
+    .minimal-nav {
+        padding: 15px 0 0 20px;
+    }
+
+    .nav-tabs {
+        gap: 20px;
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn {
         width: 200px;
     }
-    
+
     .contact-links {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .contact-link {
         width: 200px;
     }
-    
+
     .cv-actions {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .pdf-container iframe {
         height: 600px;
+    }
+
+    .profile-container h1 {
+        font-size: 2rem;
+    }
+
+    .footer-icons {
+        gap: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .nav-container {
-        flex-direction: column;
-        height: auto;
-        padding: 15px 20px;
+        padding: 0 15px;
+        height: 60px;
     }
-    
-    .nav-menu {
-        margin-top: 15px;
+
+    .logo h2 {
+        font-size: 1.3rem;
     }
-    
+
+    .minimal-nav {
+        padding: 10px 0 0 15px;
+    }
+
+    .tab-link {
+        font-size: 0.85rem;
+    }
+
     .hero {
-        padding-top: 120px;
+        padding: 20px 15px;
     }
-    
+
     .hero-content h1 {
         font-size: 2rem;
     }
-    
+
     section {
-        padding: 40px 0;
+        padding: 60px 0;
+    }
+
+    .profile-picture i {
+        font-size: 80px;
+    }
+
+    .profile-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .description p {
+        font-size: 1rem;
     }
 } 
